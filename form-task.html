@@ -100,12 +100,14 @@
 
           <form action="#" method="POST" class="space-y-5 text-sm lg:text-base">
             <input
+              name="name"
               type="text"
               placeholder="Name"
               class="w-full px-5 py-3 border border-gray-400 rounded-md"
             />
 
             <textarea
+              name="description"
               placeholder="Task Description.."
               rows="4"
               class="w-full px-5 py-3 border border-gray-400 rounded-md"
@@ -114,29 +116,43 @@
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
               <!-- Status Dropdown -->
               <div>
-                <label class="block mb-2 text-sm font-medium text-gray-700">Status</label>
-                <select class="w-full px-5 py-3 border border-gray-400 rounded-md bg-white text-black">
+                <label class="block mb-2 text-sm font-medium text-gray-700"
+                  >Status</label
+                >
+                <select
+                  name="status"
+                  class="w-full px-5 py-3 border border-gray-400 rounded-md bg-white text-black"
+                >
                   <option>Done</option>
                   <option>In Progress</option>
                   <option>In Queue</option>
                 </select>
               </div>
-            
+
               <!-- Priority Dropdown -->
               <div>
-                <label class="block mb-2 text-sm font-medium text-gray-700">Priority</label>
-                <select class="w-full px-5 py-3 border border-gray-400 rounded-md bg-white text-black">
+                <label class="block mb-2 text-sm font-medium text-gray-700"
+                  >Priority</label
+                >
+                <select
+                  name="priority"
+                  class="w-full px-5 py-3 border border-gray-400 rounded-md bg-white text-black"
+                >
                   <option>High</option>
                   <option>Medium</option>
                   <option>Low</option>
                 </select>
               </div>
-            </div>            
+            </div>
 
             <!-- Date -->
             <div>
               <label class="block mb-2 text-sm font-medium">Date</label>
-              <input type="date" class="w-full px-5 py-3 border border-gray-400 rounded-md" />
+              <input
+                name="date"
+                type="date"
+                class="w-full px-5 py-3 border border-gray-400 rounded-md"
+              />
             </div>
 
             <!-- Buttons -->
