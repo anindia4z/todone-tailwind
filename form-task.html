@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-white font-[Poppins]">
+    <!-- Sidebar -->
+    <div class="flex min-h-screen">
+      <aside class="w-64 bg-white border-r p-6">
+        <img src="assets/img/Logo 2.png" class="w-32 mx-auto mb-6" />
+        <button
+          class="bg-blue-500 text-white text-sm py-2 px-4 rounded-lg w-full mb-6"
+        >
+          Create New Task
+        </button>
+        <nav class="space-y-3">
+          <a
+            href="dashboard.html"
+            class="flex items-center space-x-2 text-blue-500 hover:text-blue-600 text-sm"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5"
+              viewBox="0 -960 960 960"
+              fill="#2A9DF4"
+            >
+              <path
+                d="M160-520v-280h280v280H160Zm0 360v-280h280v280H160Zm360-360v-280h280v280H520Zm0 360v-280h280v280H520ZM200-560h200v-200H200v200Zm360 0h200v-200H560v200Zm0 360h200v-200H560v200Zm-360 0h200v-200H200v200Zm360-360Zm0 160Zm-160 0Zm0-160Z"
+              />
+            </svg>
+            <span>Dashboard</span>
+          </a>
+          <a
+            href="task-list.html"
+            class="flex items-center space-x-2 text-black text-blue-500 hover:text-blue-600 text-sm"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5"
+              viewBox="0 -960 960 960"
+              fill="#2A9DF4"
+            >
+              <path
+                d="M384.62-220v-40H800v40H384.62Zm0-240v-40H800v40H384.62Zm0-240v-40H800v40H384.62ZM213.08-186.92q-21.9 0-37.49-15.59Q160-218.11 160-240t15.59-37.49q15.59-15.59 37.49-15.59 21.89 0 37.48 15.59 15.59 15.6 15.59 37.49t-15.59 37.49q-15.59 15.59-37.48 15.59Zm0-240q-21.9 0-37.49-15.59Q160-458.11 160-480t15.59-37.49q15.59-15.59 37.49-15.59 21.89 0 37.48 15.59 15.59 15.6 15.59 37.49t-15.59 37.49q-15.59 15.59-37.48 15.59Zm0-240q-21.9 0-37.49-15.59Q160-698.11 160-720t15.59-37.49q15.59-15.59 37.49-15.59 21.89 0 37.48 15.59 15.59 15.6 15.59 37.49t-15.59 37.49q-15.59 15.59-37.48 15.59Z"
+              />
+            </svg>
+            <span>Task List</span>
+          </a>
+          <a
+            href="#"
+            class="flex items-center space-x-2 text-black text-blue-500 hover:text-blue-600 text-sm"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5"
+              viewBox="0 -960 960 960"
+              fill="#2A9DF4"
+            >
+              <path
+                d="M478.46-160q-121.84 0-212.42-79.58Q175.46-319.15 161.23-440h40.46Q218-336.77 295.73-268.38 373.46-200 478.46-200q117 0 198.5-81.5t81.5-198.5q0-117-81.5-198.5T478.46-760q-62.08 0-116.69 26.23-54.62 26.23-96.39 72.23h99.24v40H198.46v-166.15h40v95.54q46.39-50.93 108.73-79.39Q409.54-800 478.46-800q66.54 0 124.73 25.04t101.69 68.54q43.5 43.5 68.54 101.69 25.04 58.19 25.04 124.73t-25.04 124.73q-25.04 58.19-68.54 101.69-43.5 43.5-101.69 68.54Q545-160 478.46-160Zm128.16-165.85L460.77-471.69V-680h40v191.69l134.15 134.16-28.3 28.3Z"
+              />
+            </svg>
+            <span>History</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 p-8 bg-white">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <h2 class="text-gray-700 text-sm font-bold">Task List</h2>
+            <p class="text-xs text-gray-500">Monday, 01 March 2025</p>
+          </div>
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Search Task"
+              class="border border-gray-300 text-sm rounded-lg px-4 py-2"
+            />
+            <button
+              class="absolute right-2 top-1.5 text-sm bg-blue-500 text-white px-4 py-1 rounded-lg"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+
+        <!-- Add Task Form -->
+        <div
+          class="w-full max-w-5xl mx-auto p-6 bg-white border rounded-lg border-gray-400 shadow-sm"
+        >
+          <h3 class="mb-6 text-lg font-bold text-center text-blue-500">
+            Add Task
+          </h3>
+
+          <form action="#" method="POST" class="space-y-5 text-sm lg:text-base">
+            <input
+              type="text"
+              placeholder="Name"
+              class="w-full px-5 py-3 border border-gray-400 rounded-md"
+            />
+
+            <textarea
+              placeholder="Task Description.."
+              rows="4"
+              class="w-full px-5 py-3 border border-gray-400 rounded-md"
+            ></textarea>
+
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+              <!-- Status Dropdown -->
+              <div>
+                <label class="block mb-2 text-sm font-medium text-gray-700">Status</label>
+                <select class="w-full px-5 py-3 border border-gray-400 rounded-md bg-white text-black">
+                  <option>Done</option>
+                  <option>In Progress</option>
+                  <option>In Queue</option>
+                </select>
+              </div>
+            
+              <!-- Priority Dropdown -->
+              <div>
+                <label class="block mb-2 text-sm font-medium text-gray-700">Priority</label>
+                <select class="w-full px-5 py-3 border border-gray-400 rounded-md bg-white text-black">
+                  <option>High</option>
+                  <option>Medium</option>
+                  <option>Low</option>
+                </select>
+              </div>
+            </div>            
+
+            <!-- Date -->
+            <div>
+              <label class="block mb-2 text-sm font-medium">Date</label>
+              <input type="date" class="w-full px-5 py-3 border border-gray-400 rounded-md" />
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex justify-end gap-4 pt-6">
+              <button
+                type="reset"
+                class="px-6 py-2 text-white bg-red-500 rounded hover:bg-red-600"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                class="px-6 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+              >
+                Add
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
