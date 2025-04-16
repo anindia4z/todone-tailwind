@@ -104,19 +104,25 @@
           </h3>
 
           <form action="#" method="POST" class="space-y-5 text-sm lg:text-base">
-            <input
-              name="name"
-              type="text"
-              placeholder="Name"
-              class="w-full px-5 py-3 border border-gray-400 rounded-md"
-            />
+            <div>
+              <input
+                value=""
+                name="name"
+                type="text"
+                placeholder="Name"
+                class="w-full px-5 py-3 border border-gray-400 rounded-md"
+              />
+            </div>
 
-            <textarea
-              name="description"
-              placeholder="Task Description.."
-              rows="4"
-              class="w-full px-5 py-3 border border-gray-400 rounded-md"
-            ></textarea>
+            <div>
+              <textarea
+                name="description"
+                value=""
+                placeholder="Task Description.."
+                rows="4"
+                class="w-full px-5 py-3 border border-gray-400 rounded-md"
+              ></textarea>
+            </div>
 
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
               <!-- Status Dropdown -->
@@ -128,9 +134,10 @@
                   name="status"
                   class="w-full px-5 py-3 border border-gray-400 rounded-md bg-white text-black"
                 >
-                  <option>Done</option>
-                  <option>In Progress</option>
-                  <option>In Queue</option>
+                  <option value="">-- Select Status --</option>
+                  <option value="">Done</option>
+                  <option value="">In Progress</option>
+                  <option value="">In Queue</option>
                 </select>
               </div>
 
@@ -143,9 +150,10 @@
                   name="priority"
                   class="w-full px-5 py-3 border border-gray-400 rounded-md bg-white text-black"
                 >
-                  <option>High</option>
-                  <option>Medium</option>
-                  <option>Low</option>
+                  <option value="">-- Select Priority</option>
+                  <option value="">High</option>
+                  <option value="">Medium</option>
+                  <option value="">Low</option>
                 </select>
               </div>
             </div>
@@ -154,7 +162,8 @@
             <div>
               <label class="block mb-2 text-sm font-medium">Date</label>
               <input
-                name="date"
+                value=""
+                name="deadline"
                 type="date"
                 class="w-full px-5 py-3 border border-gray-400 rounded-md"
               />
