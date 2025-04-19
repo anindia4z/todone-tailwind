@@ -13,12 +13,11 @@
       <aside class="w-64 bg-white border-r p-6">
         <img src="assets/img/Logo 2.png" class="w-32 mx-auto mb-6" />
         <a href="form-task.html">
-
-            <button
-              class="bg-blue-500 text-white text-sm py-2 px-4 rounded-lg w-full mb-6"
-            >
-              Create New Task
-            </button>
+          <button
+            class="bg-blue-500 text-white text-sm py-2 px-4 rounded-lg w-full mb-6"
+          >
+            Create New Task
+          </button>
         </a>
         <nav class="space-y-3">
           <a
@@ -134,6 +133,11 @@
                     class="bg-orange-400 text-white px-3 py-1 rounded-full font-semibold text-xs"
                     >Medium</span
                   >
+                </td>
+                <td
+                  class="py-3 px-4 {{ $task->isPastDeadline ? 'text-red-500 font-semibold' : 'text-black' }}"
+                >
+                  {{ \Carbon\Carbon::parse($task->date)->format('d/m/Y') }}
                 </td>
                 <td class="py-3 px-4">29/03/2025</td>
                 <td class="py-3 px-4 font-semibold flex items-center">
